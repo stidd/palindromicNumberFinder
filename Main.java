@@ -1,44 +1,30 @@
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
     
-    System.out.println(searchForPalindromicNum(72927));
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("***Insert your car odometer mileage to learn how many miles you'll have to drive until you end up with a palindrome.***");
 
-  }
+    System.out.println();
+    System.out.println();
 
-  public static int searchForPalindromicNum(int num){
-    boolean found = false;
-    int counter = num;
+    while(true){
+      System.out.println("Enter your odometer reading: ");
+      String input = scanner.nextLine();
 
-    while(!found){
-      counter++;
-      if(testPalindromicNum(counter)){
-        found = true;
+      if(input.equals("q")){
+        System.out.println("Seeya next time!");
+        break;
       }
+
+      PalindromicNumberFinder test = new PalindromicNumberFinder(input);
+      System.out.println(test);
+
+      System.out.println();
+      System.out.println("Enter another odometer reading or \"q\"-quit");
+
     }
-
-    return counter - num;
-  }
-
-  public static boolean testPalindromicNum(int num){
-    //test for equality
-    String reversedNum = reverseNum(num);
-    Integer convertBackToInteger = Integer.parseInt(reversedNum);
-
-    return convertBackToInteger == num;
-
-  }
-
-  public static String reverseNum(int num){
-    // return reversed number as string
-    String convertedNum = Integer.toString(num);
-
-    String reversed = "";
-
-    for(int i = convertedNum.length()-1; i >= 0; i--){
-      reversed += convertedNum.substring(i, i+1);
-    }
-
-    return reversed;
 
   }
 }
