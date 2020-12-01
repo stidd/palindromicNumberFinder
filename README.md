@@ -1,4 +1,4 @@
-This was a question posed by the World of Engineering Twitter account. The program allows the user to insert any odometer mileage and it will output the mileage you'd have to drive to reach a palindrome. 
+This was a question posed by the World of Engineering Twitter account and I solved it using the programming language Java. The program I wrote allows the user to insert any odometer mileage and it will output the mileage they'd have to drive to reach a palindrome. 
 
 ![Image of Twitter Challenge from World of Engineering](https://i.imgur.com/mKqIWTl.png)
 
